@@ -1,0 +1,14 @@
+{
+  // Tailwind v4 uses at-rules that are not part of the CSS spec VS Code
+  // validates against, so its built-in CSS linter reports `@theme` (in
+  // src/app/globals.css) as "Unknown at rule". Tailwind is the authority here:
+  // the PostCSS plugin compiles it, VS Code does not type-check it.
+  "css.lint.unknownAtRules": "ignore",
+
+  // On this machine PowerShell's execution policy is Restricted, so the
+  // npm.ps1 / npx.ps1 shims refuse to load: `npm run lint` dies with
+  // "running scripts is disabled on this system". Opening new terminals as
+  // Command Prompt runs npm.cmd instead, which is not a PowerShell script.
+  // Revert by deleting this line if the policy is ever set to RemoteSigned.
+  "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  // The Edge Functions are Deno code: plain JavaScript that imports `jsr:`
+  // specifiers only Deno can resolve, so they stay out of this project.
+  // `npm run check:syntax` parses them instead.
+  "exclude": ["node_modules", ".next", "supabase/functions"]
+}
