@@ -10,7 +10,8 @@
     "check:syntax": "node scripts/check-syntax.mjs src supabase/functions scripts",
     "check:sql": "node scripts/check-sql.mjs supabase/migrations",
     "check:functions": "node scripts/check-functions.mjs",
-    "verify:backend": "node scripts/verify-backend.mjs"
+    "verify:backend": "node scripts/verify-backend.mjs",
+    "email:test": "node scripts/send-test-email.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
